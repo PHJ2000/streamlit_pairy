@@ -11,12 +11,16 @@ import urllib.request
 import json
 import ssl
 import os
-from matplotlib import font_manager, rc
 
 # 한글 폰트 설정
-font_path = 'malgun.ttf'  # 폰트 파일 경로
+from matplotlib import font_manager, rc
+font_path = os.path.join(os.path.dirname(__file__), 'fonts', 'malgun.ttf')  # 폰트 파일 경로
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
+
+# Streamlit 앱 내용
+st.title('한글 테스트')
+st.write('이 문장은 한글로 작성되었습니다.')
 
 # 데이터 로드
 salary_data_path = 'p_salary_data_total.csv'
