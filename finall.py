@@ -148,12 +148,14 @@ elif st.session_state.page == 'page1':
     fig, ax = plt.subplots()
     for job in job_selected:
         yearly_data = df[df["job_title"] == job].groupby('work_year').agg({'salary_in_usd': 'mean'}).reset_index()
+        yearly_data['work_year'] = yearly_data['work_year'].astype(int)  # 연도를 int형으로 변환
         ax.plot(yearly_data['work_year'], yearly_data['salary_in_usd'], marker='o', linestyle='-', label=job)
     ax.set_title("연도별 평균 연봉 변화")
     ax.set_xlabel("연도")
     ax.set_ylabel("평균 연봉")
     ax.legend()
     st.pyplot(fig)
+
  
     if st.button('뒤로'):
         go_to_page('main')
