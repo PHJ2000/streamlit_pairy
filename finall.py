@@ -13,10 +13,8 @@ import ssl
 import os
 
 # 한글 폰트 설정
-from matplotlib import font_manager, rc
-font_path = os.path.join(os.path.dirname(__file__), 'fonts', 'malgun.ttf')  # 폰트 파일 경로
-font_name = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font_name)
+plt.rc('font', family='Malgun Gothic')
+
 
 # Streamlit 앱 내용
 st.title('한글 테스트')
