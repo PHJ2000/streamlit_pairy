@@ -19,11 +19,6 @@ font_manager.fontManager.addfont(font_path)
 font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
 
-
-# Streamlit 앱 내용
-st.title('한글 테스트')
-st.write('이 문장은 한글로 작성되었습니다.')
-
 # 데이터 로드
 salary_data_path = 'p_salary_data_total.csv'
 salary_data_total_path = 'salary_data_total.csv'
