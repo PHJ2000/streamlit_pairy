@@ -96,16 +96,17 @@ if st.session_state.page == 'main':
     if st.button('비자 정보 예측'):
         go_to_page('page2')
 
-    st.image('newplot.png', use_column_width=True)
-    st.image('0.png', use_column_width=True)
-    st.image('00.png', use_column_width=True)
-    st.image('1.png', use_column_width=True)
-    st.image('2.png', use_column_width=True)
-    st.image('3.png', use_column_width=True)
-    st.image('4.png', use_column_width=True)
-    st.image('5.png', use_column_width=True)
-    st.image('6.png', use_column_width=True)
-    st.image('7.png', use_column_width=True)
+    st.markdown('<img src="newplot.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="0.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="00.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="1.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="2.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="3.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="4.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="5.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="6.png" style="width:100%;">', unsafe_allow_html=True)
+    st.markdown('<img src="7.png" style="width:100%;">', unsafe_allow_html=True)
+
 
  
 # 페이지 1
