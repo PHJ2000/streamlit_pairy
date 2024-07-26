@@ -11,9 +11,12 @@ import urllib.request
 import json
 import ssl
 import os
+from matplotlib import font_manager, rc
 
 # 한글 폰트 설정
-plt.rc('font', family='Malgun Gothic')
+font_path = 'malgun.ttf'  # 폰트 파일 경로
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font_name)
 
 # 데이터 로드
 salary_data_path = 'p_salary_data_total.csv'
