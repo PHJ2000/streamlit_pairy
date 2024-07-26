@@ -13,7 +13,11 @@ import ssl
 import os
 
 # 한글 폰트 설정
-plt.rc('font', family='Malgun Gothic')
+from matplotlib import font_manager, rc
+font_path = os.path.join(os.path.dirname(__file__), 'malgun.ttf')  # 폰트 파일 경로
+font_manager.fontManager.addfont(font_path)
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font_name)
 
 
 # Streamlit 앱 내용
